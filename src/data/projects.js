@@ -7,8 +7,9 @@ export const LINKEDIN = "https://www.linkedin.com/in/saifi-raza-a4b3b6377";
 export const EMAIL = "uprising185@gmail.com";
 export const PHONE = "7977206560";
 
-// Drop your resume file at /public/resume.pdf and this link works automatically.
-export const RESUME_URL = "/resume.pdf";
+// Resume file lives in /public; the button downloads it directly.
+export const RESUME_URL = "/Saifi_Resume.docx";
+export const RESUME_FILENAME = "Saifi_Resume.docx";
 
 export const projects = [
   {

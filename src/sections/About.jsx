@@ -1,7 +1,7 @@
 import Button from "../components/Button.jsx";
 import Icon from "../components/Icon.jsx";
 import Reveal from "../components/Reveal.jsx";
-import { highlights, RESUME_URL } from "../data/projects.js";
+import { highlights, RESUME_URL, RESUME_FILENAME } from "../data/projects.js";
 
 export default function About() {
   return (
@@ -28,7 +28,12 @@ export default function About() {
               </p>
             </Reveal>
             <Reveal delay={160} className="about-resume">
-              <Button variant="ghost" href={RESUME_URL} icon="download" external>
+              <Button
+                variant="ghost"
+                href={RESUME_URL}
+                icon="download"
+                download={RESUME_FILENAME}
+              >
                 Download Resume
               </Button>
             </Reveal>

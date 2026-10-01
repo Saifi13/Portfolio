@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "./Button.jsx";
-import { RESUME_URL } from "../data/projects.js";
+import { RESUME_URL, RESUME_FILENAME } from "../data/projects.js";
 
 const links = [
   { id: "home", label: "Home" },
@@ -82,7 +82,7 @@ export default function Navbar() {
                 size="sm"
                 href={RESUME_URL}
                 icon="download"
-                external
+                download={RESUME_FILENAME}
                 aria-label="Download resume"
               >
                 Resume
@@ -122,7 +122,12 @@ export default function Navbar() {
           </a>
         ))}
         <div className="m-actions">
-          <Button variant="primary" href={RESUME_URL} icon="download" external>
+          <Button
+            variant="primary"
+            href={RESUME_URL}
+            icon="download"
+            download={RESUME_FILENAME}
+          >
             Download Resume
           </Button>
           <Button variant="ghost" href="#contact" onClick={go("contact")}>

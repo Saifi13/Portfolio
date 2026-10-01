@@ -8,6 +8,7 @@ export default function Button({
   icon,
   iconEnd,
   external,
+  download,
   className = "",
   ...rest
 }) {
@@ -28,7 +29,8 @@ export default function Button({
       <a
         className={classes}
         href={href}
-        {...(external
+        {...(download ? { download } : {})}
+        {...(external && !download
           ? { target: "_blank", rel: "noopener noreferrer" }
           : {})}
         {...rest}
